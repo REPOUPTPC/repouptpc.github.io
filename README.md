@@ -61,9 +61,9 @@ Calle principal Edif. IUTPC Zona Industrial Santa Rosa, Circuito Comunal 8, Parr
 <br>
 
 <div align="center">
-  <img src="img/mppeu.png" alt="Ministerio del Poder Popular para la Educación Universitaria" height="50" />
+  <img src="img/mppeu.png" alt="Ministerio del Poder Popular para la Educación Universitaria" height="200" />
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="img/mincyt.png" alt="Ministerio del Poder Popular para Ciencia y Tecnología" height="50" />
+  <img src="img/mincyt.png" alt="Ministerio del Poder Popular para Ciencia y Tecnología" height="200" />
 </div>
 
 <br>
