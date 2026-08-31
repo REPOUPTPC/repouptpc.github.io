@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REPOUPTPC | Universidad Politécnica Territorial de Puerto Cabello</title>
+  <meta name="description" content="Plataforma principal de repositorios y proyectos de software e investigación de la Universidad Politécnica Territorial de Puerto Cabello (UPTPC) y su Unidad de Ciencia y Tecnología (CYT).">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="img/LOGO_UPTPC.png">
+  <link rel="apple-touch-icon" href="img/CYT.png">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Institutional Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-badges">
+        <span class="top-badge">🏛️ Miembro activo del Consejo Científico Estadal de Carabobo</span>
+        <span class="top-badge">🔬 En línea con la Gran Misión Ciencia y Tecnología</span>
+      </div>
+      <div class="top-bar-links">
+        <a href="https://www.uptpc.edu.ve/" target="_blank" rel="noopener noreferrer">
+          🌐 Portal Web Oficial UPTPC
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="navbar">
+    <div class="container navbar-container">
+      <div class="brand-wrapper">
+        <div class="brand-logos">
+          <a href="#" title="Universidad Politécnica Territorial de Puerto Cabello">
+            <img src="img/LOGO_UPTPC.png" alt="Logo UPTPC" class="brand-logo">
+          </a>
+          <span class="brand-divider"></span>
+          <a href="#" title="Unidad de Ciencia y Tecnología">
+            <img src="img/CYT.png" alt="Logo Ciencia y Tecnología UPTPC" class="brand-logo">
+          </a>
+        </div>
+        <div class="brand-text">
+          <h1>REPOUPTPC</h1>
+          <span>Universidad Politécnica Territorial de Puerto Cabello</span>
+        </div>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Abrir Menú">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+        <li><a href="#automatizacion" class="nav-link">Automatización</a></li>
+        <li><a href="#repositorios" class="nav-link">Repositorios</a></li>
+        <li><a href="#institucional" class="nav-link">CYT UPTPC</a></li>
+        <li><a href="https://www.uptpc.edu.ve/ciencia-y-tecnolog%C3%ADa/repositorios-github" target="_blank" rel="noopener noreferrer" class="nav-link">Guía</a></li>
+        <li>
+          <a href="https://uptpc.github.io/proyecto-automatizacion/" target="_blank" rel="noopener noreferrer" class="nav-cta">
+            ⚡ Crear Repositorio
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span>🚀 Repositorio Institucional de Software & Ciencia</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Unidad de Ciencia y Tecnología <span>UPTPC</span>
+          </h1>
+
+          <p class="hero-description">
+            Plataforma centralizada de código abierto, desarrollo tecnológico e investigación de la <strong>Universidad Politécnica Territorial de Puerto Cabello UPTPC</strong>.
+          </p>
+
+          <!-- Slogan Card -->
+          <div class="slogan-card">
+            "En la Universidad Politécnica Territorial de Puerto Cabello, también somos ciencia para la vida"
+          </div>
+
+          <div class="hero-actions">
+            <a href="https://uptpc.github.io/proyecto-automatizacion/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              ✨ Crear Repositorio Automatizado
+            </a>
+            <a href="https://github.com/REPOUPTPC?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              📂 Ver en GitHub
+            </a>
+            <a href="https://www.uptpc.edu.ve/ciencia-y-tecnolog%C3%ADa/repositorios-github" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              📖 Guía de Creación
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-card">
+            <div class="visual-header">
+              <span class="visual-title">Ecosistema REPOUPTPC</span>
+              <span class="status-indicator">
+                <span class="status-dot"></span> Operativo
+              </span>
+            </div>
+
+            <div class="stats-grid">
+              <div class="stat-box">
+                <div class="stat-number" id="stat-total-repos">--</div>
+                <div class="stat-label">Repositorios Activos</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Código Abierto</div>
+              </div>
+            </div>
+
+            <div class="quick-info">
+              💡 <strong>¿Eres estudiante o investigador de la UPTPC?</strong><br>
+              Genera la estructura de tu proyecto automáticamente con los estándares institucionales.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Automation Spotlight Section -->
+  <section id="automatizacion" class="section section-bg">
+    <div class="container">
+      <div class="automation-card">
+        <div class="automation-grid">
+          <div class="automation-info">
+            <span class="automation-badge">⚡ Herramienta Automática</span>
+            <h2 class="automation-title">Creación Automatizada de Repositorios</h2>
+            <p class="automation-desc">
+              Invitamos a todos los estudiantes, profesores e investigadores de la UPTPC a utilizar nuestra plataforma especial para generar y desplegar repositorios de software estandarizados.
+            </p>
+
+            <div class="steps-list">
+              <div class="step-item">
+                <span class="step-number">1</span>
+                <div class="step-content">
+                  <h4>Genera la Estructura Institucional</h4>
+                  <p>Accede al asistente web y completa los datos de tu proyecto académico o de investigación.</p>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">2</span>
+                <div class="step-content">
+                  <h4>Configuración de Licencia y README</h4>
+                  <p>Inclusión automática de la documentación estandarizada requerida por la universidad.</p>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">3</span>
+                <div class="step-content">
+                  <h4>Publicación en @UPTPC</h4>
+                  <p>Tu repositorio se creará automáticamente en la organización oficial <a href="https://github.com/UPTPC" target="_blank" rel="noopener noreferrer" style="font-weight: 700; text-decoration: underline;">https://github.com/UPTPC</a>.</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="https://uptpc.github.io/proyecto-automatizacion/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                🚀 Ir a Creador Automatizado
+              </a>
+              <a href="https://www.uptpc.edu.ve/ciencia-y-tecnolog%C3%ADa/repositorios-github" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                📄 Ver Tutorial Paso a Paso
+              </a>
+            </div>
+          </div>
+
+          <div class="automation-preview">
+            <div class="code-header">
+              <span class="code-dot dot-red"></span>
+              <span class="code-dot dot-yellow"></span>
+              <span class="code-dot dot-green"></span>
+              <span class="code-title">uptpc-automation-terminal</span>
+            </div>
+            <pre><code><span style="color: #60a5fa;"># Generando repositorio institucional UPTPC...</span>
+$ open https://uptpc.github.io/proyecto-automatizacion/
+
+<span style="color: #4ade80;">[SUCCESS]</span> Proyecto verificado por la CYT
+<span style="color: #4ade80;">[SUCCESS]</span> Estructura y Licencia generadas
+<span style="color: #4ade80;">[SUCCESS]</span> Repositorio creado en https://github.com/UPTPC/
+
+<span style="color: #facc15;">★ ¡Listo para colaborar en el espacio @UPTPC!</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Repositories Showcase Section -->
+  <section id="repositorios" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Catálogo de Proyectos</span>
+        <h2 class="section-title">Repositorios Activos de la UPTPC</h2>
+        <p class="section-description">
+          Explora los proyectos de investigación, herramientas de automatización y desarrollo de software producidos por nuestra comunidad universitaria.
+        </p>
+      </div>
+
+      <!-- Search & Filter Controls -->
+      <div class="search-filter-bar">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="repo-search" class="search-input" placeholder="Buscar repositorio por nombre o palabra clave...">
+        </div>
+
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="javascript">JavaScript</button>
+          <button class="filter-btn" data-filter="python">Python</button>
+          <button class="filter-btn" data-filter="html">HTML / Web</button>
+          <button class="filter-btn" data-filter="docs">Documentación</button>
+        </div>
+      </div>
+
+      <!-- Dynamic Repos Grid -->
+      <div id="repos-container" class="repos-grid">
+        <!-- Rendered via JavaScript -->
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="https://github.com/REPOUPTPC?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          🔗 Ver todos los repositorios en GitHub.com
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Institutional Badges Section -->
+  <section class="badges-section">
+    <div class="container">
+      <div class="badges-grid">
+        <div class="badge-item">
+          <div class="badge-icon">🏛️</div>
+          <div class="badge-text">
+            <h3>Consejo Científico Estadal</h3>
+            <p>Miembro activo del Consejo Científico Estadal de Carabobo.</p>
+          </div>
+        </div>
+
+        <div class="badge-item">
+          <div class="badge-icon">🔬</div>
+          <div class="badge-text">
+            <h3>Gran Misión Ciencia y Tecnología</h3>
+            <p>Proyectos alineados con los vértices de soberanía e innovación nacional.</p>
+          </div>
+        </div>
+
+        <div class="badge-item">
+          <div class="badge-icon">🌱</div>
+          <div class="badge-text">
+            <h3>Ciencia para la Vida</h3>
+            <p>Desarrollo tecnológico al servicio del pueblo y el desarrollo territorial.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="institucional" class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand & Address Column -->
+        <div class="footer-brand">
+          <div class="footer-logos">
+            <img src="img/LOGO_UPTPC.png" alt="Logo UPTPC" class="footer-logo-img">
+            <img src="img/CYT.png" alt="Logo CYT UPTPC" class="footer-logo-img">
+          </div>
+          
+          <div class="footer-brand-title">
+            Universidad Politécnica Territorial de Puerto Cabello UPTPC
+          </div>
+
+          <p style="font-size: 0.88rem; color: #94a3b8; font-weight: 600;">
+            Unidad de Ciencia y Tecnología
+          </p>
+
+          <div class="footer-address">
+            Calle principal Edif. IUTPC Zona Industrial Santa Rosa, Circuito Comunal 8, Parroquia Juan José Flores,<br>
+            Puerto Cabello, Estado Carabobo, Venezuela.
+          </div>
+
+          <div>
+            <span class="footer-rif">RIF: G-20005608-8</span>
+          </div>
+
+          <!-- Ministerial Logos -->
+          <div class="footer-logos-ministerial">
+            <img src="img/mppeu.png" alt="Ministerio del Poder Popular para la Educación Universitaria" class="ministerio-logo" title="MPPEU">
+            <img src="img/mincyt.png" alt="Ministerio del Poder Popular para Ciencia y Tecnología" class="ministerio-logo" title="MINCYT">
+          </div>
+        </div>
+
+        <!-- Direct Links -->
+        <div class="footer-column">
+          <h4>Enlaces Principales</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#automatizacion">Creación de Repositorios</a></li>
+            <li><a href="#repositorios">Catálogo de Software</a></li>
+            <li><a href="https://uptpc.github.io/proyecto-automatizacion/" target="_blank" rel="noopener noreferrer">Plataforma Automatización</a></li>
+            <li><a href="https://github.com/REPOUPTPC?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub Organización</a></li>
+          </ul>
+        </div>
+
+        <!-- Institutional Links -->
+        <div class="footer-column">
+          <h4>Institucional</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.uptpc.edu.ve/" target="_blank" rel="noopener noreferrer">Portal Oficial UPTPC</a></li>
+            <li><a href="https://www.uptpc.edu.ve/ciencia-y-tecnolog%C3%ADa/repositorios-github" target="_blank" rel="noopener noreferrer">Instrucciones Repositorios</a></li>
+            <li><a href="https://www.uptpc.edu.ve/" target="_blank" rel="noopener noreferrer">Unidad de Ciencia y Tecnología</a></li>
+            <li><a href="https://www.uptpc.edu.ve/" target="_blank" rel="noopener noreferrer">Consejo Científico Carabobo</a></li>
+          </ul>
+        </div>
+
+        <!-- Slogan & Info Column -->
+        <div class="footer-column">
+          <h4>Ciencia para la Vida</h4>
+          <p style="font-size: 0.9rem; line-height: 1.6; opacity: 0.9; margin-bottom: 1rem;">
+            En la Universidad Politécnica Territorial de Puerto Cabello, impulsamos el conocimiento libre, el desarrollo soberano y la innovación tecnológica.
+          </p>
+          <div style="background: rgba(255,255,255,0.08); padding: 1rem; border-radius: var(--radius-sm); border-left: 3px solid var(--blue-400); font-size: 0.85rem;">
+            🇻🇪 Compromiso social y tecnológico para Puerto Cabello, Carabobo y Venezuela.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="footer-bottom">
+        <div class="copyright">
+          © <span id="year">2026</span> Universidad Politécnica Territorial de Puerto Cabello (UPTPC). Todos los derechos reservados.
+        </div>
+        <div class="footer-slogan-small">
+          "En la UPTPC, también somos ciencia para la vida"
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
