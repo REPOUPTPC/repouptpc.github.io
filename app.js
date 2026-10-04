@@ -92,35 +92,50 @@ async function initGitHubRepos() {
   if (!reposContainer) return;
 
   try {
-    // Try fetching from orgs API first, fallback to users API
-    let response = await fetch('https://api.github.com/orgs/REPOUPTPC/repos?sort=updated&per_page=30');
-    if (!response.ok) {
-      response = await fetch('https://api.github.com/users/REPOUPTPC/repos?sort=updated&per_page=30');
-    }
+    let page = 1;
+    let fetchedRepos = [];
+    let keepFetching = true;
 
-    if (response.ok) {
+    // Recorre todas las páginas (hasta 100 repos por petición)
+    while (keepFetching) {
+      // Consulta directa al endpoint de usuarios
+      let response = await fetch(`https://api.github.com/users/REPOUPTPC/repos?sort=updated&per_page=100&page=${page}`);
+
+      // Fallback a orgs por si en el futuro migran a organización
+      if (response.status === 404 && page === 1) {
+        response = await fetch(`https://api.github.com/orgs/REPOUPTPC/repos?sort=updated&per_page=100&page=${page}`);
+      }
+
+      if (!response.ok) break;
+
       const data = await response.json();
       if (Array.isArray(data) && data.length > 0) {
-        allRepos = data;
+        fetchedRepos = fetchedRepos.concat(data);
+        // Si llegaron menos de 100, ya no quedan más páginas
+        if (data.length < 100) {
+          keepFetching = false;
+        } else {
+          page++;
+        }
       } else {
-        allRepos = DEFAULT_REPOS;
+        keepFetching = false;
       }
-    } else {
-      allRepos = DEFAULT_REPOS;
     }
+
+    allRepos = fetchedRepos.length > 0 ? fetchedRepos : DEFAULT_REPOS;
   } catch (err) {
     console.warn('Error fetching GitHub API, using fallback repos list:', err);
     allRepos = DEFAULT_REPOS;
   }
 
-  // Update total count
+  // Actualizar contador total
   if (totalCounter) {
     totalCounter.textContent = allRepos.length;
   }
 
   renderRepos();
 
-  // Search Input Event
+  // Evento del buscador
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       searchQuery = e.target.value.toLowerCase().trim();
@@ -128,7 +143,7 @@ async function initGitHubRepos() {
     });
   }
 
-  // Filter Buttons Event
+  // Evento de los filtros
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
